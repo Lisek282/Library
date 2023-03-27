@@ -18,8 +18,8 @@ function displayBooks(){
     let card = `<div class="card">
                     <h2>${book.title}</h2>
                     <p>${book.author}</p>
-                    <p>${book.pages}</p>
-                    <p>${book.read}</p>
+                    <p>Number of pages: ${book.pages}</p>
+                    <p>Read status: ${book.read}</p>
                   </div>`
     display.innerHTML += card
   })
