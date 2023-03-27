@@ -1,0 +1,42 @@
+body{
+  background-color: #cbd5e1;
+  position: absolute;
+}
+
+.booksDisplay{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card{
+  background-color: white;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#new_book{
+  --btn-width-height: 80px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 3rem;
+  border-radius: 50%;
+  width: var(--btn-width-height);
+  height: var(--btn-width-height);
+  border: none;
+  background-color: #38bdf8;
+  color: white;
+}
+
+#new_book:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+#new_book:active{
+  background-color: #0A76A7;
+}
