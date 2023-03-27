@@ -1,5 +1,8 @@
 const form = document.querySelector('form')
+const formDiv = document.getElementById('form_div')
 const display = document.getElementById('display')
+const newBookBtn = document.getElementById('new_book')
+const turnOffBtn = document.getElementById('turnOffBtn')
 
 let myLibrary = [];
 
@@ -47,3 +50,13 @@ function addBookToLibrary(e) {
   
   displayBooks()
 }
+
+newBookBtn.addEventListener('click', () => {
+  formDiv.classList.add('visibility')
+  newBookBtn.classList.add('notVisible')
+})
+
+turnOffBtn.addEventListener('click', () => {
+  formDiv.classList.remove('visibility')
+  newBookBtn.classList.remove('notVisible')
+})
