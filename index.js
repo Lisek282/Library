@@ -17,8 +17,9 @@ function Book(title, author, pages, read) {
 
 function displayBooks(){
   display.innerHTML = ``
-  myLibrary.map(book => {
-    let card = `<div class="card">
+  
+  myLibrary.map((book, index) => {
+    let card = `<div class="card" data-id=${index}>
                     <h2>${book.title}</h2>
                     <p>${book.author}</p>
                     <p>Number of pages: ${book.pages}</p>
@@ -38,8 +39,8 @@ function addBookToLibrary(e) {
 
   let radioBtns = document.getElementsByName('read')
 
-  radioBtns.forEach(btn => {
-    if(btn.checked){
+  radioBtns.forEach((btn) => {
+    if (btn.checked) {
       read = btn.value
     }
   })
@@ -47,7 +48,7 @@ function addBookToLibrary(e) {
   const book = new Book(title, author, pages, read)
 
   myLibrary.push(book)
-  
+
   displayBooks()
 }
 
